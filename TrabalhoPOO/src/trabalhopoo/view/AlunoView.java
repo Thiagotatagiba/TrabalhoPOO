@@ -7,16 +7,12 @@ package trabalhopoo.view;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Amanda
- */
-public class AlunoView {
+public class TurmaView {
     private static Scanner entrada = new Scanner(System.in);
-	private AlunoDao alunoDao;
+	private TurmaDao turmaDao;
 	
-	public AlunoView (AlunoDao alunoDao){
-		this.alunoDao = alunoDao;
+	public TurmaDao (TurmaDao turmaDao){
+		this.turmaDao = turmaDao;
 	}
 	
 	public static Scanner getEntrada() {
@@ -24,7 +20,7 @@ public class AlunoView {
 	}
 
 	public static void setEntrada(Scanner entrada) {
-		AlunoView.entrada = entrada;
+		TurmaView.entrada = entrada;
 	}
     
    /* Dao<Aluno> dao;
@@ -34,18 +30,20 @@ public class AlunoView {
      
  
     public void cadastrar(){
-        System.out.println("Cadastro de alunos");
-        System.out.println("Informe o nome: ");
-        String nome = entrada.nextLine();
-	while (verificacoes.verificarStringVazia(nome) || verificacoes.verificarStringSoNumeros(nome)){
-		System.out.println("Nome do aluno nao aceito, digite o nome do aluno novamente: ");
-		nome = entrada.nextLine();
+        System.out.println("Cadastro de turmas");
+        System.out.println("Informe o ano: ");
+        int ano = entrada.nextLine();
+	//while (verificacoes.verificarStringVazia(nome) || verificacoes.verificarStringSoNumeros(nome)){
+	//	System.out.println("Nome do aluno nao aceito, digite o nome do aluno novamente: ");
+	//	nome = entrada.nextLine();
 	}
-        System.out.println("Digite o CPF: ");
-	String cpf = entrada.nextLine();
-	while (verificacoes.verificarCpf(cpf) == false){
-            System.out.println("CPF invalido, digite o CPF novamente: ");
-		cpf = entrada.nextLine();
+        System.out.println("Digite o período: ");
+	int período = entrada.nextLine();
+	//while (verificacoes.verificarCpf(cpf) == false){
+        //    System.out.println("CPF invalido, digite o CPF novamente: ");
+	//	cpf = entrada.nextLine();
+        System.out.println("Digite o local: ");
+	String local = entrada.nextLine();
 	}
 	if (AlunoDao.verificar(cpf) != null){
 		System.out.println("Aluno ja estava cadastrado!");
@@ -55,15 +53,15 @@ public class AlunoView {
         Aluno aluno = new Aluno(nome,cpf);
         scan.close();
    
-        dao.salvar(aluno);
+        dao.salvar(turma);
     }
     
     public void listar(){
 
-        List<Aluno> listaAluno = dao.obterTodos();
+        List<Turma> listaTurmas = dao.obterTodos();
         
         for(Aluno aluno : listaAluno){
-            System.out.println(aluno.getNome()+ " " + aluno.getCpf());
+            System.out.println(turma.getNome()+ " " + aluno.getCpf());
         }
         
     }
