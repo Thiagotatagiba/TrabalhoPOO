@@ -5,9 +5,12 @@
  */
 package trabalhopoo.view;
 
+import java.util.Scanner;
+        
+        
 /**
  *
- * @author Amanda
+ * @author Thiago
  */
 public class AtividadeView {
     

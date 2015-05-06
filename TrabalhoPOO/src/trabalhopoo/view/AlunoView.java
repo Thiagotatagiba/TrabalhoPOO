@@ -30,15 +30,15 @@ public class TurmaView {
      
  
     public void cadastrar(){
-        System.out.println("Cadastro de turmas");
-        System.out.println("Informe o ano: ");
-        int ano = entrada.nextLine();
+        System.out.println("Cadastro de Aluno");
+        System.out.println("Informe o nome: ");
+        String aluno = entrada.nextLine();
 	//while (verificacoes.verificarStringVazia(nome) || verificacoes.verificarStringSoNumeros(nome)){
 	//	System.out.println("Nome do aluno nao aceito, digite o nome do aluno novamente: ");
 	//	nome = entrada.nextLine();
 	}
-        System.out.println("Digite o período: ");
-	int período = entrada.nextLine();
+        System.out.println("Digite o CPF: ");
+	String cpf = entrada.nextLine();
 	//while (verificacoes.verificarCpf(cpf) == false){
         //    System.out.println("CPF invalido, digite o CPF novamente: ");
 	//	cpf = entrada.nextLine();
@@ -58,7 +58,7 @@ public class TurmaView {
     
     public void listar(){
 
-        List<Turma> listaTurmas = dao.obterTodos();
+        List<Aluno> listaAluno = dao.obterTodos();
         
         for(Aluno aluno : listaAluno){
             System.out.println(turma.getNome()+ " " + aluno.getCpf());
